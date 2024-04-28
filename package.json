@@ -1,0 +1,27 @@
+{
+  "name": "playwright-program",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "api-test": "npx playwright test api_order.spec.ts",
+    "test:parallel":"cross-env test_env=uiTest npx playwright test login.test.spec.ts",
+    "test:parallel-headed":"cross-env test_env=uiTest npx playwright test login.test.spec --headed",
+    "test:chromium":"cross-env test_env=uiTest npx playwright test login.test.spec --project=chromium --headed",
+    "test:firefox":"cross-env test_env=uiTest npx playwright test login.test.spec --project=firefox --headed",
+    "test:webkit":"cross-env test_env=uiTest npx playwright test login.test.spec--project=webkit --headed",
+    "test:mobile-safari":"cross-env test_env=uiTest npx playwright test login.test.spec --project=MobileSafari --headed",
+    "test:mobile-chrome":"cross-env test_env=uiTest npx playwright test login.test.spec --project=MobileChrome --headed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.43.1",
+    "@types/node": "^20.12.7"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.5"
+  }
+}
